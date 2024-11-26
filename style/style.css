@@ -62,9 +62,8 @@ body {
   font-size: 23px;
   opacity: 1;
 }
-.main{
-height: 85vh;
-
+.main {
+  height: 85vh;
 }
 .gaming-space {
   display: flex;
@@ -105,28 +104,28 @@ height: 85vh;
   object-fit: cover;
   display: block;
 }
-.gaming-space__upgrades{
+.gaming-space__upgrades {
   display: flex;
   padding-top: 40px;
   gap: 70px;
   font-size: 26px;
-  top:68vh;
+  top: 68vh;
   position: absolute;
   padding-left: 15vh;
 }
-.ligue-status{
+.ligue-status {
   position: relative;
 }
-.ligue-status::before{
+.ligue-status::before {
   position: absolute;
-  content:"";
-  background-image:url(../images/status.svg);
+  content: "";
+  background-image: url(../images/status.svg);
   left: -37px;
   height: 30px;
   width: 32px;
   top: -2px;
 }
-.upgrader-btn{
+.upgrader-btn {
   font-size: 26px;
   background-color: rgb(255 192 203 / 52%);
   margin-left: 10px;
@@ -135,65 +134,138 @@ height: 85vh;
   line-height: 1.2;
   position: relative;
   padding-left: 30px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-.upgrader-btn::before{
+.upgrader-btn::before {
   position: absolute;
-  content:'';
-  background-image:url(../images/level-up.svg);
+  content: "";
+  background-image: url(../images/level-up.svg);
   left: -1px;
   height: 30px;
   width: 32px;
   top: -1px;
 }
-.upgrader-btn:hover{
-transform: scale(110%);
+.upgrader-btn:hover {
+  transform: scale(110%);
 }
 
-.footer{
-  padding:40px 0;
-  background-color:var(--footer-color);
-  color:#FFFF;
+.random {
+  padding-top: 10vh;
+}
+.random__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.random__img {
+  width: 50vw;
+  height: 40vh;
+}
+.random__img img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.random__btn {
+  margin-top: 7vh;
+  padding: 20px;
+  border: 1px black solid;
+  font-size: 26px;
+  background-color: rgb(255 192 203 / 52%);
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.2;
+  border-radius: 13%;
+}
+.random__btn:hover {
+  transform: scale(110%);
+}
+.footer {
+  padding: 40px 0;
+  background-color: var(--footer-color);
+  color: #ffff;
   font-size: 14px;
   display: flex;
   flex-direction: column;
 }
-.footer__joke{
+.footer__joke {
   margin-bottom: 10px;
 }
-.footer__joke-link{
+.footer__joke-link {
   display: block;
   text-align: center;
   position: relative;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-.footer__joke-link:hover{
+.footer__joke-link:hover {
   font-size: 17px;
-  color:red;
+  color: red;
 }
-.footer__joke-link::after{
+.footer__joke-link::after {
   position: absolute;
-  content:'';
+  content: "";
   top: 0;
   right: 0;
-  background-image:url(../images/left-arrow.svg);
-  height:17px;
+  background-image: url(../images/left-arrow.svg);
+  height: 17px;
   width: 17px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
-.footer__joke-link::before{
+.footer__joke-link::before {
   position: absolute;
-  content:'';
+  content: "";
   top: 0;
   left: 0;
-  background-image:url(../images/right-arrow.svg);
-  height:17px;
+  background-image: url(../images/right-arrow.svg);
+  height: 17px;
   width: 17px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
-.footer__joke-link:hover.footer__joke-link::before{
-  left:-18px;
+.footer__joke-link:hover.footer__joke-link::before {
+  left: -18px;
 }
-.footer__joke-link:hover.footer__joke-link::after{
-  right:-18px;
+.footer__joke-link:hover.footer__joke-link::after {
+  right: -18px;
+}
+@media (max-width:690px) {
+  .header__list-link{
+    font-size: 16px;
+  }
+}
+@media (max-width:590px) {
+  .header__list-link{
+    font-size: 14px;
+  }
+  .header__list {
+    gap: 40px;
+}
+}
+@media (max-width:400px){
+.container {
+  max-width: 92%;
+}
+.header__list {
+  gap: 30px;
+}
+.header__list-item::after {
+  top: 0px;
+  right: -16px;
+}
+.gaming-space__tap-zone-btn {
+  width: 40vh;
+}
+.gaming-space__upgrades {
+  display: flex;
+  padding-top: 33px;
+  gap: 29px;
+  font-size: 25px;
+  top: 56vh;
+  position: absolute;
+  padding-left: 6vh;
+}
+.upgrader-btn {
+  font-size: 17px;
+}
 }
