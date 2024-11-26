@@ -1,0 +1,199 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+:root {
+  --header-color: #343a40;
+  --main-color: #f8f9fa;
+  --footer-color: #6c757d;
+}
+body {
+  color: black;
+  font-family: "Rubik", sans-serif;
+  font-size: 16;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+.header {
+  padding: 40px 0;
+  background-color: var(--header-color);
+  margin-bottom: 7vh;
+}
+.header__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  color: var(--main-color);
+}
+.header__list-item {
+  position: relative;
+}
+.header__list-item::after {
+  position: absolute;
+  content: "|";
+  top: 3px;
+  right: -31px;
+}
+.header__list-link {
+  font-size: 20px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+.header__list-link:hover {
+  font-size: 23px;
+  opacity: 1;
+}
+.main{
+height: 85vh;
+
+}
+.gaming-space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.gaming-space__counter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 6vh;
+}
+.gaming-space__counter-coins {
+  font-size: 26px;
+}
+.gaming-space__tap-zone-btn {
+  width: 55vh;
+  border: 1px black solid;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c8b398;
+  cursor: pointer;
+  transition: transform 0.1s;
+  -webkit-box-shadow: 8px 9px 8px 2px rgba(34, 60, 80, 0.37);
+  -moz-box-shadow: 8px 9px 8px 2px rgba(34, 60, 80, 0.37);
+  box-shadow: 8px 9px 8px 2px rgba(34, 60, 80, 0.37);
+}
+.gaming-space__tap-zone-btn:active {
+  transform: scale(0.95);
+}
+.gaming-space__tap-zone-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gaming-space__upgrades{
+  display: flex;
+  padding-top: 40px;
+  gap: 70px;
+  font-size: 26px;
+  top:68vh;
+  position: absolute;
+  padding-left: 15vh;
+}
+.ligue-status{
+  position: relative;
+}
+.ligue-status::before{
+  position: absolute;
+  content:"";
+  background-image:url(../images/status.svg);
+  left: -37px;
+  height: 30px;
+  width: 32px;
+  top: -2px;
+}
+.upgrader-btn{
+  font-size: 26px;
+  background-color: rgb(255 192 203 / 52%);
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 30px;
+  transition: all .3s ease;
+}
+.upgrader-btn::before{
+  position: absolute;
+  content:'';
+  background-image:url(../images/level-up.svg);
+  left: -1px;
+  height: 30px;
+  width: 32px;
+  top: -1px;
+}
+.upgrader-btn:hover{
+transform: scale(110%);
+}
+
+.footer{
+  padding:40px 0;
+  background-color:var(--footer-color);
+  color:#FFFF;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__joke{
+  margin-bottom: 10px;
+}
+.footer__joke-link{
+  display: block;
+  text-align: center;
+  position: relative;
+  transition: all .3s ease;
+}
+.footer__joke-link:hover{
+  font-size: 17px;
+  color:red;
+}
+.footer__joke-link::after{
+  position: absolute;
+  content:'';
+  top: 0;
+  right: 0;
+  background-image:url(../images/left-arrow.svg);
+  height:17px;
+  width: 17px;
+  transition: all .5s ease;
+}
+.footer__joke-link::before{
+  position: absolute;
+  content:'';
+  top: 0;
+  left: 0;
+  background-image:url(../images/right-arrow.svg);
+  height:17px;
+  width: 17px;
+  transition: all .5s ease;
+}
+.footer__joke-link:hover.footer__joke-link::before{
+  left:-18px;
+}
+.footer__joke-link:hover.footer__joke-link::after{
+  right:-18px;
+}
