@@ -6,6 +6,9 @@ html {
 *::before {
   box-sizing: inherit;
 }
+button{
+  color:inherit;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -128,6 +131,7 @@ body {
 .upgrader-btn {
   font-size: 26px;
   background-color: rgb(255 192 203 / 52%);
+  border:1px solid black;
   margin-left: 10px;
   cursor: pointer;
   font-weight: 500;
